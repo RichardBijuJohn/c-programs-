@@ -7,7 +7,7 @@ void merge(int arr[], int l, int m, int r) {
     int *L = (int *)malloc(n1 * sizeof(int));
     int *R = (int *)malloc(n2 * sizeof(int));
     for (i = 0; i < n1; i++)
-        L[i] = arr[left + i];
+        L[i] = arr[l + i];
     for (j = 0; j < n2; j++)
         R[j] = arr[m + 1 + j];
     i = 0; 
@@ -44,7 +44,7 @@ void mergeSort(int arr[], int l, int r) {
         merge(arr, l, m, r);
     }
 }
-void printArray(int arr[], int size) {
+void printarr(int arr[], int size) {
     for (int i = 0; i < size; i++)
         printf("%d ", arr[i]);
     printf("\n");
@@ -65,10 +65,10 @@ int main() {
         scanf("%d", &arr[i]);
     }
     printf("Given array is \n");
-    printArray(arr, n);
+    printarr(arr, n);
     mergeSort(arr, 0, n - 1);
-    printf("Sorted array is \n");
-    printArray(arr, n);
+    printf("Sorted array (using merge_sort)\n");
+    printarr(arr, n);
     free(arr);
     return 0;
 }
