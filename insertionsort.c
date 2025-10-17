@@ -30,7 +30,7 @@ int main() {
     printf("Original array: ");
     printarr(arr, n);
     insr(arr, n);
-    printf("Sorted array: ");
-    printArray(arr, n);
+    printf("Sorted array(using insertion_Sort): ");
+    printarr(arr, n);
     return 0;
 }
